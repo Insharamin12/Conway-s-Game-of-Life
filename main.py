@@ -16,3 +16,9 @@ for x in range(WIDTH):
 while True: # Main program loop.
     print('\n\n\n\n\n') # Separate each step with newlines.
     currentCells = copy.deepcopy(nextCells)
+
+    # Print currentCells on the screen:
+    for y in range(HEIGHT):
+        for x in range(WIDTH):
+            print(currentCells[x][y], end='') # Print the # or space.
+        print() # Print a newline at the end of the row.
