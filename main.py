@@ -32,3 +32,22 @@ while True: # Main program loop.
             rightCoord = (x + 1) % WIDTH
             aboveCoord = (y - 1) % HEIGHT
             belowCoord = (y + 1) % HEIGHT
+            
+# Count number of living neighbors:
+            numNeighbors = 0
+            if currentCells[leftCoord][aboveCoord] == '#':
+                numNeighbors += 1 # Top-left neighbor is alive.
+            if currentCells[x][aboveCoord] == '#':
+                numNeighbors += 1 # Top neighbor is alive.
+            if currentCells[rightCoord][aboveCoord] == '#':
+                numNeighbors += 1 # Top-right neighbor is alive.
+            if currentCells[leftCoord][y] == '#':
+                numNeighbors += 1 # Left neighbor is alive.
+            if currentCells[rightCoord][y] == '#':
+                numNeighbors += 1 # Right neighbor is alive.
+            if currentCells[leftCoord][belowCoord] == '#':
+                numNeighbors += 1 # Bottom-left neighbor is alive.
+            if currentCells[x][belowCoord] == '#':
+                numNeighbors += 1 # Bottom neighbor is alive.
+            if currentCells[rightCoord][belowCoord] == '#':
+                numNeighbors += 1 # Bottom-right neighbor is alive.
