@@ -12,3 +12,7 @@ for x in range(WIDTH):
         else:
             column.append(' ') # Add a dead cell.
     nextCells.append(column) # nextCells is a list of column lists.
+    
+while True: # Main program loop.
+    print('\n\n\n\n\n') # Separate each step with newlines.
+    currentCells = copy.deepcopy(nextCells)
